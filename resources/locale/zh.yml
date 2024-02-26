@@ -1,0 +1,67 @@
+gtdxyz-money-plus:
+  admin:
+    settings:
+      title: 配置
+      moneyforpost: 评论奖励
+      moneyfordiscussion: 发帖奖励
+      moneyname: "对外名称 (例如: 金币/铜币/分)"
+      postminimumlength: 获得奖励的最小长度评论 (0 to disable)
+      noshowzero: 0 时不展示
+      autoremove: 自动移除资金
+      moneyforlike: 回复被喜欢时奖励
+      helpextensionlikes: 需要插件 <code>flarum/likes</code>
+    permissions:
+      edit_money_label: 编辑资金权限
+    autoremove:
+      0: 从不移除资金
+      1: 当帖子被隐藏或被恢复时 (default)
+      2: 当帖子被删除
+    automoderator:
+      metric_name: Money
+      action_name: Give money
+  forum:
+    user_controls:
+      money_button: 编辑
+    modal:
+      title: "{username}'s money"
+      current: "当前:"
+      submit_button: => core.ref.okay
+  
+  history:
+    admin:
+    forum:
+      nav: 记录
+      title: 交易记录
+      list-empty: 没有找到记录
+      money-list-load-more: 读取更多
+      record:
+        from: 来自
+        money-out: 支出
+        money-in: 收入
+        money-list-type: 类型
+        money-list-assign-at: 时间
+        money-list-id: ID
+        money-list-from-user: 操作人
+        money-list-target-user: 操作账户
+        money-list-amount: 金额
+        money-list-change: 变动
+        money-list-transfer-notes: 来源
+        money-list-balance: 变动
+  
+  history-auto:
+    admin:
+    forum:
+      checkin-saved: "签到奖励"
+      discussion-was-started: "发帖奖励"
+      discussion-was-deleted: "删除帖子"
+      discussion-was-restored: "恢复帖子"
+      discussion-was-hidden: "隐藏帖子"
+      post-was-posted: "回复奖励"
+      post-was-liked: "点赞奖励"
+      post-was-unliked: "点赞取消"
+      post-was-deleted: "删除回复"
+      post-was-restored: "恢复回复"
+      post-was-hidden: "隐藏回复"
+      system-rewards: "系统奖励"
+      admin-rewards: "社区奖励"
+      searching-recipient: "转账"

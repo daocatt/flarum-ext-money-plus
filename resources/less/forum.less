@@ -1,0 +1,72 @@
+#avatarClone{
+  right:-7px;
+  .username{
+    display:none;
+  }
+}
+
+.moneyHistoryUser {
+  .Avatar {
+    .Avatar--size(24px);
+    vertical-align: middle;
+    margin-right: 5px;
+  }
+}
+
+
+
+.money-history-list{
+
+  .title{
+    padding-bottom:10px;
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  .ul-list{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    position: relative;
+    > li{
+      padding-bottom:10px;
+
+      .transferHistoryContainer {
+        border: 1px dotted var(--control-color);
+        padding: 10px;
+        border-radius: 4px;
+        .history-item-type{
+          margin-bottom:10px;
+          i.fas{
+            margin-right:8px;
+            color:#999;
+          }
+          .changeType{
+            margin-right:8px;
+          }
+          .changeTime{
+            color:#999;
+          }
+        }
+        .history-item-source{
+          .moneyHistoryUser{
+            margin-right:8px;
+          }
+          .changeSource{
+            margin-right:8px;
+          }
+        }
+      }
+    }
+  }
+  .empty-list{
+    font-size:1.4em;
+    color: var(--muted-more-color);
+    text-align: center;
+    height: 300px;
+    line-height: 100px;
+  }
+  .load-moey{
+    text-align:center;
+    padding:20px
+  }
+}
