@@ -2,9 +2,12 @@
 
 This is a collect extension include:
 
-![antoinefr/flarum-ext-money](https://github.com/AntoineFr/flarum-ext-money)
-![flarum-ext-money-history](https://github.com/Mattoids/flarum-ext-money-history)
-![flarum-ext-money-history-auto](https://github.com/Mattoids/flarum-ext-money-history-auto)
+- [antoinefr/flarum-ext-money](https://github.com/AntoineFr/flarum-ext-money)
+
+- [flarum-ext-money-history](https://github.com/Mattoids/flarum-ext-money-history)
+
+- [flarum-ext-money-history-auto](https://github.com/Mattoids/flarum-ext-money-history-auto)
+
 
 Depend on your requirment.
 
