@@ -5,7 +5,7 @@ namespace Gtdxyz\Money\History\Api\Controller;
 use Flarum\Api\Controller\AbstractListController;
 use Flarum\User\UserRepository;
 use Gtdxyz\Money\History\Api\Serializer\MoneyHistorySerializer;
-use Gtdxyz\Money\History\model\UserMoneyHistory;
+use Gtdxyz\Money\History\Model\UserMoneyHistory;
 use Psr\Http\Message\ServerRequestInterface;
 use Tobscure\JsonApi\Document;
 use Flarum\Http\UrlGenerator;
