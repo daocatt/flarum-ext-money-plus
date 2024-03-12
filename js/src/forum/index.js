@@ -52,12 +52,17 @@ app.initializers.add('gtdxyz-money-plus', () => {
     }
 
 
-    items.add('userMoneyHistory', LinkButton.component({
-      href: app.route('userMoneyHistory', {
-        username: app.session.user.username(),
-      }),
-      icon: 'fas fa-wallet',
-    }, app.forum.attribute('gtdxyz-money-plus.moneyname')+app.translator.trans('gtdxyz-money-plus.history.forum.nav')));
+    items.add(
+      'userMoneyHistory',
+      LinkButton.component({
+        href: app.route('userMoneyHistory', {
+          username: app.session.user.username(),
+        }),
+        icon: 'fas fa-wallet',
+      }, app.forum.attribute('gtdxyz-money-plus.moneyname')+app.translator.trans('gtdxyz-money-plus.history.forum.nav')
+      ),
+      10
+    );
   });
 
 });
