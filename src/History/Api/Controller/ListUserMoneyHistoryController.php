@@ -35,7 +35,12 @@ class ListUserMoneyHistoryController extends AbstractListController
         $limit = $this->extractLimit($request);
         $offset = $this->extractOffset($request);
 
-        $userID = $actor->id;
+        if(isset($params['filter']) && isset($params['filter']['user'])){
+            $userID = $params['filter']['user'];
+        }else{
+            $userID = 0;
+        }
+        
         $moneyHistoryQuery = UserMoneyHistory::query()->where(["user_id"=>$userID]);
         $MoneyHistoryResult = $moneyHistoryQuery
             ->skip($offset)

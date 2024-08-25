@@ -56,7 +56,7 @@ app.initializers.add('gtdxyz-money-plus', () => {
       'userMoneyHistory',
       LinkButton.component({
         href: app.route('userMoneyHistory', {
-          username: app.session.user.username(),
+          username: this.user.username(),
         }),
         icon: 'fas fa-wallet',
       }, app.forum.attribute('gtdxyz-money-plus.moneyname')+app.translator.trans('gtdxyz-money-plus.history.forum.nav')

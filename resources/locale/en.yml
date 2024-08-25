@@ -2,6 +2,7 @@ gtdxyz-money-plus:
   admin:
     settings:
       title: Settings
+      moneyforregistration: Money given after registration
       moneyforpost: Money given for a new post
       moneyfordiscussion: Money given for a new discussion
       moneyname: "Name of the money (ex: Gold/Cu/Points)"
@@ -51,6 +52,7 @@ gtdxyz-money-plus:
   history-auto:
     admin:
     forum:
+      registration: "Register"
       checkin-saved: "Checkin rewards"
       discussion-was-started: "Discussion rewards"
       discussion-was-deleted: "Discussion Deleted"

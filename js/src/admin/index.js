@@ -11,6 +11,14 @@ app.initializers.add('gtdxyz-money-plus', () => {
     .registerSetting(function () {
       return (
         <div className="Form-group">
+          <label>{app.translator.trans('gtdxyz-money-plus.admin.settings.moneyforregistration')}</label>
+          <input type="number" className="FormControl" step="any" bidi={this.setting('gtdxyz-money-plus.moneyforregistration')} />
+        </div>
+      );
+    })
+    .registerSetting(function () {
+      return (
+        <div className="Form-group">
           <label>{app.translator.trans('gtdxyz-money-plus.admin.settings.moneyforpost')}</label>
           <input type="number" className="FormControl" step="any" bidi={this.setting('gtdxyz-money-plus.moneyforpost')} />
         </div>

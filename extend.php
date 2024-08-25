@@ -4,6 +4,7 @@ namespace Gtdxyz\Money;
 
 use Flarum\Extend;
 use Flarum\Api\Serializer\UserSerializer;
+use Flarum\User\Event\Registered;
 use Flarum\Post\Event\Posted;
 use Flarum\Post\Event\Restored as PostRestored;
 use Flarum\Post\Event\Hidden as PostHidden;
@@ -59,6 +60,7 @@ $extend = [
         ->add(UserSaveMiddleware::class),
 
     (new Extend\Event())
+        ->listen(Registered::class, Listeners\PostRegisterOperations::class)
         ->listen(Posted::class, [Listeners\GiveMoney::class, 'postWasPosted'])
         ->listen(PostRestored::class, [Listeners\GiveMoney::class, 'postWasRestored'])
         ->listen(PostHidden::class, [Listeners\GiveMoney::class, 'postWasHidden'])
