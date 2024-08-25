@@ -2,12 +2,14 @@
 
 namespace Gtdxyz\Money\Listeners;
 
+use Flarum\Foundation\ValidationException;
 use Illuminate\Support\Arr;
 use Flarum\Locale\Translator;
 use Flarum\Settings\SettingsRepositoryInterface;
 use Illuminate\Contracts\Events\Dispatcher;
 use Flarum\User\User;
 use Flarum\Post\Event\Posted;
+use Flarum\Post\Event\Saving as PostSaving;
 use Flarum\Post\Event\Restored as PostRestored;
 use Flarum\Post\Event\Hidden as PostHidden;
 use Flarum\Post\Event\Deleted as PostDeleted;
@@ -58,6 +60,22 @@ class GiveMoney
                 $this->events->dispatch(new MoneyHistoryEvent($user, $money, $source, $sourceDesc));
             }
         }
+    }
+
+    //check if reduced money when post
+    public function postSaving(PostSaving $event)
+    {
+        $user = $event->post->user;
+        $money = (int)$this->settings->get('gtdxyz-money-plus.moneyforpost', 0);
+
+        if($money < 0){
+            if(bcadd($user->money, $money) < 0){
+                throw new ValidationException([
+                    'message' => $this->settings->get('gtdxyz-money-plus.moneyname').$this->translator->trans('gtdxyz-money-plus.forum.error.money_less_than_need')
+                ]);
+            }
+        }
+        
     }
 
     public function postWasPosted(Posted $event)
