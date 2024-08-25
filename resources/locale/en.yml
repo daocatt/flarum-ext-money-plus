@@ -27,6 +27,8 @@ gtdxyz-money-plus:
       title: "{username}'s money"
       current: "Current:"
       submit_button: => core.ref.save_changes
+    error:
+      money_less_than_need: " less for post"
 
   history:
     admin:
