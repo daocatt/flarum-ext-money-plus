@@ -2,6 +2,7 @@ gtdxyz-money-plus:
   admin:
     settings:
       title: 配置
+      moneyforregistration: 注册奖励
       moneyforpost: 评论奖励
       moneyfordiscussion: 发帖奖励
       moneyname: "对外名称 (例如: 金币/铜币/分)"
@@ -51,6 +52,7 @@ gtdxyz-money-plus:
   history-auto:
     admin:
     forum:
+      registration: "注册奖励"
       checkin-saved: "签到奖励"
       discussion-was-started: "发帖奖励"
       discussion-was-deleted: "删除帖子"
