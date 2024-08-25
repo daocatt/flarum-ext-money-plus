@@ -1,3 +1,9 @@
+# 说明
+
+请先删除其它可能创建money数据表的插件，包括flarum-ext-monney插件不需要安装
+
+这个插件是完成的独立插件
+
 # flarum-ext-money-plus
 
 This is a collect extension include:
